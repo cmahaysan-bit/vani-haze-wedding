@@ -12,8 +12,8 @@
     padding: 0;
     font-family: 'Raleway', sans-serif;
     background: radial-gradient(circle at top, #000000 0%, #050505 100%);
-    color: #ffd580;  /* more orange-gold */
-    overflow-y: auto;  /* enable scrolling */
+    color: #ffd580;
+    overflow-y: auto;
   }
 
   /* Twinkling Stars */
@@ -55,70 +55,97 @@
     background: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(12px);
     border: 1px solid rgba(255, 159, 28, 0.3);
-    padding: 40px 30px;
-    margin: 50px auto;
-    max-width: 900px;
-    border-radius: 20px;
+    padding: 30px 20px;
+    margin: 40px auto;
+    max-width: 800px;
+    border-radius: 15px;
     text-align: center;
-    box-shadow: 0 0 40px rgba(255, 159, 28, 0.15);
+    box-shadow: 0 0 30px rgba(255, 159, 28, 0.15);
   }
 
   .logo svg {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 15px;
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
     opacity: 0.8;
   }
 
   h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 3em;
+    font-size: 2.2em;
     color: #ff9f1c;
-    text-shadow: 0 0 15px rgba(255,159,28,0.6);
+    text-shadow: 0 0 12px rgba(255,159,28,0.6);
     margin-bottom: 0.1em;
   }
 
   h2 {
     color: #ffd580;
-    font-size: 1.2em;
+    font-size: 1em;
     margin-top: 0;
     font-weight: 400;
   }
 
   .divider {
-    width: 100px;
+    width: 80px;
     height: 3px;
     background: linear-gradient(90deg, transparent, #ff9f1c, transparent);
-    margin: 20px auto;
+    margin: 15px auto;
     border-radius: 2px;
   }
 
   .event {
     background: rgba(255, 159, 28, 0.08);
-    padding: 15px 25px;
-    margin: 20px 0;
-    border-radius: 12px;
+    padding: 12px 20px;
+    margin: 15px 0;
+    border-radius: 10px;
     border-left: 4px solid #ff9f1c;
     text-align: left;
-    box-shadow: 0 0 15px rgba(255, 159, 28, 0.1);
+    box-shadow: 0 0 12px rgba(255, 159, 28, 0.1);
   }
 
   .time {
     font-weight: bold;
     color: #ff9f1c;
-    font-size: 1.1em;
+    font-size: 1em;
   }
 
   .desc {
     color: #ffd580;
-    font-size: 0.95em;
-    margin-top: 5px;
+    font-size: 0.9em;
+    margin-top: 4px;
   }
 
   .footer {
-    margin-top: 30px;
-    font-size: 0.95em;
+    margin-top: 25px;
+    font-size: 0.9em;
     color: #ffb84d;
+  }
+
+  /* Responsive for small screens */
+  @media (max-width: 480px) {
+    .overlay {
+      padding: 20px 15px;
+      margin: 20px 10px;
+    }
+    h1 {
+      font-size: 1.8em;
+    }
+    h2 {
+      font-size: 0.95em;
+    }
+    .logo svg {
+      width: 35px;
+      height: 35px;
+    }
+    .event {
+      padding: 10px 15px;
+    }
+    .time {
+      font-size: 0.95em;
+    }
+    .desc {
+      font-size: 0.85em;
+    }
   }
 </style>
 </head>
@@ -156,7 +183,7 @@
   </div>
 
   <div class="event">
-    <span class="time">9:00 PM — Sparkler Send-Off</span>
+    <span class="time">9:00 PM — Light Up the Night</span>
     <p class="desc">End the night with sparkles of joy — join us as the stars mirror our smiles.</p>
   </div>
 
@@ -177,5 +204,3 @@
 
 </body>
 </html>
-
-
