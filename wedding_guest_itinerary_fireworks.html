@@ -1,6 +1,3 @@
-# wedding_guest_itinerary_heart_ring_subtle.py
-
-html_content = """
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,9 +11,9 @@ html_content = """
     margin: 0;
     padding: 0;
     font-family: 'Raleway', sans-serif;
-    background: radial-gradient(circle at top, #0a1124 0%, #000000 100%);
-    color: #fff;
-    overflow: hidden;
+    background: radial-gradient(circle at top, #000000 0%, #050505 100%);
+    color: #ffd580;  /* more orange-gold */
+    overflow-y: auto;  /* enable scrolling */
   }
 
   /* Twinkling Stars */
@@ -39,7 +36,7 @@ html_content = """
     position: absolute;
     width: 4px;
     height: 4px;
-    background: radial-gradient(circle, #ffd580 0%, rgba(255,255,255,0) 70%);
+    background: radial-gradient(circle, #ff9f1c 0%, rgba(255,159,28,0) 70%);
     border-radius: 50%;
     animation: drift 6s linear infinite;
     opacity: 0.8;
@@ -51,46 +48,38 @@ html_content = """
     100% {transform: translateY(0) scale(0.8); opacity: 0.6;}
   }
 
-  /* Golden Glow Overlay */
+  /* Overlay */
   .overlay {
     position: relative;
     z-index: 5;
-    background: rgba(255, 245, 230, 0.08);
-    backdrop-filter: blur(15px);
-    border: 1px solid rgba(255, 215, 120, 0.3);
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 159, 28, 0.3);
     padding: 40px 30px;
-    margin: 80px auto;
+    margin: 50px auto;
     max-width: 900px;
     border-radius: 20px;
     text-align: center;
-    box-shadow: 0 0 40px rgba(255, 215, 120, 0.15);
+    box-shadow: 0 0 40px rgba(255, 159, 28, 0.15);
   }
 
-  /* Logo SVG styling */
   .logo svg {
-    width: 50px;  /* smaller size */
+    width: 50px;
     height: 50px;
     margin-bottom: 15px;
-    opacity: 0.8;  /* subtle effect */
+    opacity: 0.8;
   }
 
-  /* Glowing Text */
   h1 {
     font-family: 'Playfair Display', serif;
     font-size: 3em;
-    color: #ffda77;
-    text-shadow: 0 0 15px rgba(255, 215, 100, 0.6);
-    animation: glow 3s ease-in-out infinite alternate;
+    color: #ff9f1c;
+    text-shadow: 0 0 15px rgba(255,159,28,0.6);
     margin-bottom: 0.1em;
   }
 
-  @keyframes glow {
-    from { text-shadow: 0 0 10px #b68f40, 0 0 20px #b68f40; }
-    to { text-shadow: 0 0 25px #ffd580, 0 0 50px #ffefb0; }
-  }
-
   h2 {
-    color: #fff8e1;
+    color: #ffd580;
     font-size: 1.2em;
     margin-top: 0;
     font-weight: 400;
@@ -99,30 +88,29 @@ html_content = """
   .divider {
     width: 100px;
     height: 3px;
-    background: linear-gradient(90deg, transparent, #ffd580, transparent);
+    background: linear-gradient(90deg, transparent, #ff9f1c, transparent);
     margin: 20px auto;
     border-radius: 2px;
   }
 
-  /* Event Cards */
   .event {
-    background: rgba(255, 255, 255, 0.08);
+    background: rgba(255, 159, 28, 0.08);
     padding: 15px 25px;
     margin: 20px 0;
     border-radius: 12px;
-    border-left: 4px solid #ffd580;
+    border-left: 4px solid #ff9f1c;
     text-align: left;
-    box-shadow: 0 0 15px rgba(255, 215, 120, 0.1);
+    box-shadow: 0 0 15px rgba(255, 159, 28, 0.1);
   }
 
   .time {
     font-weight: bold;
-    color: #ffd580;
+    color: #ff9f1c;
     font-size: 1.1em;
   }
 
   .desc {
-    color: #f5f5f5;
+    color: #ffd580;
     font-size: 0.95em;
     margin-top: 5px;
   }
@@ -130,25 +118,23 @@ html_content = """
   .footer {
     margin-top: 30px;
     font-size: 0.95em;
-    color: #ffe8b3;
+    color: #ffb84d;
   }
 </style>
 </head>
 <body>
 
 <div class="stars"></div>
-
-<!-- Floating Sparks -->
 <div id="sparkContainer"></div>
 
 <div class="overlay">
   <div class="logo">
-    <!-- Subtle Heart + Ring SVG Logo -->
     <svg viewBox="0 0 64 64">
-      <path d="M32 58s-22-16-22-34a12 12 0 0 1 24 0 12 12 0 0 1 24 0c0 18-22 34-22 34z" fill="none" stroke="#ffd580" stroke-width="2"/>
-      <circle cx="32" cy="28" r="6" fill="none" stroke="#ffd580" stroke-width="2"/>
+      <path d="M32 58s-22-16-22-34a12 12 0 0 1 24 0 12 12 0 0 1 24 0c0 18-22 34-22 34z" fill="none" stroke="#ff9f1c" stroke-width="2"/>
+      <circle cx="32" cy="28" r="6" fill="none" stroke="#ff9f1c" stroke-width="2"/>
     </svg>
   </div>
+
   <h1>Mahaysan & Vani</h1>
   <h2>Wedding Itinerary</h2>
   <h2>26 OCT 2025 • Raffles Marina</h2>
@@ -178,7 +164,6 @@ html_content = """
 </div>
 
 <script>
-  // Create sparkles dynamically
   const container = document.getElementById('sparkContainer');
   for (let i = 0; i < 40; i++) {
     const spark = document.createElement('div');
@@ -192,10 +177,5 @@ html_content = """
 
 </body>
 </html>
-"""
 
-# Save the file
-with open("wedding_guest_itinerary_heart_ring_subtle.html", "w", encoding="utf-8") as f:
-    f.write(html_content)
 
-print("✨ wedding_guest_itinerary_heart_ring_subtle.html created successfully! 🌌")
